@@ -12,6 +12,7 @@ Electronic-Business-Card-Project
 
 <br><br><br>
 
+<h3>Why?</h3><br><br>
 Being a fairly fresh graduate, I have spent a lot of time job hunting and networking over the past year.  Meeting people for the first time, the questions I’m generally asked is where I went to school, what I majored in, and who else I knew at the event or in the industry.  This formulaic interaction would be followed up with a business card request and a promise to follow up (which would never happen because nothing in those conversations could really make me stand out).
 
 This process has always been irritating to me for two reasons: nothing is conveyed about my capabilities, experiences, or really anything important, and the concept of paper business cards seems inefficient.  They’re easy to loose and having too many can make them annoying to sort through. 
