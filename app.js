@@ -15,9 +15,6 @@ var flash = require('express-flash');
 var session = require('express-session');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
-var events = require('./routes/events');
-var messages = require('./routes/messages');
 
 var app = express();
 
@@ -61,7 +58,7 @@ function exposeTemplates(req, res, next) {
 }
 
 app.locals.inspect = require('util').inspect;
-require('./config/passport')(passport);
+// require('./config/passport')(passport);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
