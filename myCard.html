@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Awesome Restaurants in the San Francisco Bay Area</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <style>
+    	.container {
+    		max-width:360px;
+    		float:left;
+    	}
+
+    	.headshot {
+    		max-height:150px;
+    		max-width:150px;
+    	}
+
+    	.headline {
+    		display:inline-block;
+    	}
+
+    	.skillsList {
+    		display:inline;
+    		margin: 3px;
+    		padding:3px;
+    		float:left;
+    	}
+
+    	.skillButtons {
+    		margin:0px;
+    	}
+
+    	.contactButtons {
+    		/* dislpay:inline */
+    		height:40px;
+    		border:1px solid black;
+    	}
+
+    	.cardPort {
+    		margin-top: 5%;
+    	}
+
+    	.panelHead {
+    		max-width: 45%;
+    	}
+
+    	.panel-body {
+    		margin-top: 10px;
+    	}
+
+
+    </style>
+</head>
+<body style="max-width:360px">
+	<heading class="container">
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		  <div class="container">
+		    <a href="home.html"><button class="nav-button navbar-btn">Home</button></a>
+		    <a href="myCard.html"><button class="nav-button navbar-btn">MyCard</button></a>
+		    <button class="nav-button navbar-btn">Log Out</button>
+		  </div>
+		</nav>
+		<br><br><br>
+		<form class="navbar-form navbar-right" role="search">
+			<div class="form-group">
+		    <input type="text" class="form-control" placeholder="Find People">
+		  </div>
+		  <button type="submit" class="btn btn-default">Search</button>
+		</form>
+	</heading>
+	<section class="cardPort container"><!-- add infinite scroll -->
+		<div class=""> <!-- Card 1 -->
+			<div class="panel panel-default">
+			  <div class="panel-heading container">
+			    <h3 class="panel-title">
+			    	<input type="text" class="form-control col-sm-4 panelHead" placeholder="Full Name" style="float:left;">
+			    	<input type="text" class="form-control col-sm-4 panelHead" placeholder="Position" style="float:right;">
+			    </h3>
+			  </div>
+			  <div class="panel-body">
+			    <div class="description">
+				    <img src="images/swatiHeadshot.jpg" class="col-sm-4 headshot">
+				    <p class="col-sm-8 headline"><textarea class="form-control" rows="3" placeholder="100 character headline goes here"></textarea></p>
+			  	</div><br><br><br>
+			  	<div class="btn skillButtons">
+					<div class="input-group"> <!-- Skill 1 Input -->
+					  <div class="col-sm-6"> 
+						  <input type="text" class="form-control" placeholder="Skill 1">
+					  </div>
+					  <div class="col-sm-6">
+						  <input type="text" class="form-control" placeholder="Link 1">
+					  </div>
+					</div><br>
+					<div class="input-group"> <!-- Skill 2 Input -->
+					  <div class="col-sm-6">
+						  <input type="text" class="form-control" placeholder="Skill 2">
+					  </div>
+					  <div class="col-sm-6">
+						  <input type="text" class="form-control" placeholder="Link 2">
+					  </div>
+					</div><br>
+					<div class="input-group"> <!-- Skill 3 Input -->
+					  <div class="col-sm-6">
+						  <input type="text" class="form-control" placeholder="Skill 3">
+					  </div>
+					  <div class="col-sm-6">
+						  <input type="text" class="form-control" placeholder="Link 3">
+					  </div>
+					</div><br>
+					<div class="input-group"> <!-- Skill 4 Input -->
+					  <div class="col-sm-6">
+						  <input type="text" class="form-control" placeholder="Skill 4">
+					  </div>
+					  <div class="col-sm-6">
+						  <input type="text" class="form-control" placeholder="Link 4">
+					  </div>
+					</div><br>
+					<div class="input-group"> <!-- Skill 5 Input -->
+					  <div class="col-sm-6">
+						  <input type="text" class="form-control" placeholder="Skill 5">
+					  </div>
+					  <div class="col-sm-6">
+						  <input type="text" class="form-control" placeholder="Link 5">
+					  </div>
+					</div><br>
+					<div class="input-group"> <!-- Skill 6 Input -->
+					  <div class="col-sm-6">
+						  <input type="text" class="form-control" placeholder="Skill 6">
+					  </div>
+					  <div class="col-sm-6">
+						  <input type="text" class="form-control" placeholder="Link 6">
+					  </div>
+					</div><br>
+			  	</div></span><br><br>
+			  	<div class="" style="">
+			    	<span class="input-group-addon"><img src="images/mail.png" class="contactButtons"></span>
+				    	<div class="">
+							<input type="text" class="form-control" placeholder="Skill 1">
+						</div><br><br>
+			    	<span class="input-group-addon"><img src="images/phone.png" class="contactButtons"></span>
+			    		<div class="">
+							<input type="text" class="form-control" placeholder="Skill 1">
+						</div><br><br>
+			    	<span class="input-group-addon"><img src="images/linkedin-wrap.png" class="contactButtons"></span>
+			    		<div class="">
+							<input type="text" class="form-control" placeholder="Skill 1">
+						</div><br><br>
+			    	<span class="input-group-addon"><img src="images/twitter.png" class="contactButtons"></span>
+			    		<div class="">
+							<input type="text" class="form-control" placeholder="Skill 1">
+						</div><br><br>
+			    </div>
+			  </div>
+		</div>
+
+		
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>
