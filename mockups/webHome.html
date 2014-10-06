@@ -11,6 +11,11 @@
 
 <body class="body">
 	<div class="card container"><!-- add infinite scroll -->
+		<form class="form-horizontal" role="form" ng-submit="addUser()">
+	         <input type="text" placeholder="Enter Github Username" class="form-control" name="username"
+	                 ng-model="username" required /><br><br>
+	         <input type="submit" value="Submit" class="btn btn-primary" />
+     	</form>
 		<span class="name"><h1>Swati Kumar | Web Developer</h1></span><br><br><br><br>
 		<div class="description">
 		    <img src="images/swatiHeadshot.jpg" class="col-md-4 headshot">
