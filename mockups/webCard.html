@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html ng-app="busCard">
+<head>
+    <title>Business Card</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="webCardStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+</head>
+
+<body class="body">
+	<div class="card container wrapper" ng-controller="MainCtrl">
+		<div ng-hide="showme" ng-show="edit">
+			<h3>Enter your details below to generate your business card.</h3>
+			<form class="form-horizontal myCard" role="form" ng-submit="addUser()">
+		         <input type="text" placeholder="Enter Github Username" class="form-control" name="username" ng-model="username" ><br>
+		         <input type="text" placeholder="Enter Linkedin Public URL" class="form-control" name="linkedin" ng-model="linkedin" /><br>
+		         <input type="text" placeholder="Enter Twitter Username" class="form-control" name="twitter" ng-model="twitter" /><br>
+		         <input type="text" placeholder="Enter Phone Number (12345678900)" class="form-control" name="phone" ng-model="phone" /><br>
+		         <input type="text" placeholder="Enter Email Address" class="form-control" name="email" ng-model="email"/><br>
+		         <input type="text" placeholder="Job Title/Position" class="form-control" name="position" ng-model="position" /><br>
+		         <input type="textarea" rows="3" placeholder="Headline" class="form-control" name="headline" ng-model="headline" /><br>
+		         <div>
+		         	<!-- Skill 1 -->
+				    <input class="form-control skillInput" type="text" placeholder="Skill 1 Name" name="skillOneName" ng-model="skillOneName"/><br>
+				    <input class="form-control skillInput" type="text" placeholder="Skill 1 Link" name="skillOneLink" ng-model="skillOneLink"/><br>
+
+				    <!-- Skill 2 -->
+				    <input class="form-control skillInput" type="text" placeholder="Skill 2 Name" name="skillTwoName" ng-model="skillTwoName"/><br>
+				    <input class="form-control skillInput" type="text" placeholder="Skill 2 Link" name="skillTwoLink" ng-model="skillTwoLink"/><br>
+
+				   <!--  Skill 3 -->
+				    <input class="form-control skillInput" type="text" placeholder="Skill 3 Name" name="skillThreeName" ng-model="skillThreeName"/><br>
+				    <input class="form-control skillInput" type="text" placeholder="Skill 3 Link" name="skillThreeLink" ng-model="skillThreeLink"/><br>
+
+				    <!-- Skill 4 -->
+				    <input class="form-control skillInput" type="text" placeholder="Skill 4 Name" name="skillFourName" ng-model="skillFourName"><br>
+				    <input class="form-control skillInput" type="text" placeholder="Skill 4 Link" name="skillFourLink" ng-model="skillFourLink"/><br>
+
+				   <!--  Skill 5 -->
+				    <input class="form-control skillInput" type="text" placeholder="Skill 5 Name" name="skillFiveName" ng-model="skillFiveName" /><br>
+				    <input class="form-control skillInput" type="text" placeholder="Skill 5 Link" name="skillFiveLink" ng-model="skillFiveLink"/><br>
+
+				  <!--   Skill 6 -->
+				    <input class="form-control skillInput" type="text" placeholder="Skill 6 Name" name="skillSixName" ng-model="skillSixName"/><br>
+				    <input class="form-control skillInput" type="text" placeholder="Skill 6 Link" name="skillSixLink" ng-model="skillSixLink"/><br>
+				 </div>
+
+		         <a href="" ng-click="showme=true"><input type="submit" value="Submit" class="btn btn-primary" /></a>
+		    </form>
+		</div>
+		<div class="wrapper">
+			<div ng-show="showme" ng-hide="edit">
+				<a href="" ng-click="edit=true"><input type="edit" value="Edit" class="btn btn-primary" /></a>
+				<span class="name"><h1>{{userdata.name}} | {{position}}</h1></span>
+				<h4 class="name">{{userdata.location}}</h4><br><br><br><br>
+				<div class="description">
+				    <img src="{{userdata.avatar_url}}" class="headshot">
+				    <div class="col-md-8">
+					    <h3 class="headline">{{headline}}</h3>
+					    
+					</div>
+			  	</div><br><br>
+			  	<div class="col-md-12">
+			  	  <ul class="skillsRounds">        
+				    <li><a href="{{skillOneLink}}" class="col-sm-6 col-md-6 col-lg-6">{{skillOneName}}</a></li> 
+				    <li><a href="{{skillTwoLink}}" class="col-sm-6 col-md-6 col-lg-6">{{skillTwoName}}</a></li> 
+				    <li><a href="{{skillThreeLink}}" class="col-sm-6 col-md-6 col-lg-6">{{skillThreeName}}</a></li> 
+				    <li><a href="{{skillFourLink}}" class="col-sm-6 col-md-6 col-lg-6">{{skillFourName}}</a></li> 
+				    <li><a href="{{skillFiveLink}}" class="col-sm-6 col-md-6 col-lg-6">{{skillFiveName}}</a></li> 
+				    <li><a href="{{skillSixLink}}" class="col-sm-6 col-md-6 col-lg-6">{{skillSixName}}</a></li> 
+				  </ul> 
+				</div>
+			  	<div class="col-md-12 footer" style="text-align:center;">
+			    	<a href="'mailto:'+'{{email}}'"><img src="images/mail.png" class="contactButtons"></a>
+			    	<a href='"tel:"+"{{phone}}"'><img src="images/phone.png" class="contactButtons"></a>
+			    	<a href="{{linkedin}}"><img src="images/linkedin-wrap.png" class="contactButtons"></a>
+			    	<a href="'http://twitter.com/'+'{{twitter}}'"><img src="images/twitter.png" class="contactButtons"></a>
+			    	<a href="'http://github.com/'+'{{username}}'"><img src="github.png" class="contactButtons"></a>
+			    </div><br><br>
+			</div>
+		</div>
+	</div> 
+
+	<script>
+	var myApp = angular.module('busCard', []);
+	myApp.controller('MainCtrl', function ($scope, $http) {
+          $scope.addUser = function() {
+            var theUrl = "https://api.github.com/users/"+$scope.username;
+            console.log(theUrl);
+
+            var promise = $http.get(theUrl);
+            promise.then(function(response){
+              $scope.userdata = response.data;
+              console.log("userdata = "+$scope.userdata);
+            }) 
+          
+        }
+    })
+	</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>

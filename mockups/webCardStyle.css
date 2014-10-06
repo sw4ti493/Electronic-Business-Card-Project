@@ -1,0 +1,77 @@
+
+    .body {
+    	background-color: black;
+    }
+
+    .card {
+    	max-width:50%;
+    	text-align:center;
+    	background-color:white;
+    	margin:auto;
+    }
+
+    .name{
+    	text-align:left;
+    }
+
+    .headshot {
+		max-height:150px;
+		max-width:150px;
+		float:left;
+    }
+
+    .headline{
+    	text-align: left;
+    	float:right;
+    }
+
+    .contactButtons {
+    		dislpay:inline;
+    		height:40px;
+    		border:1px solid black;
+    	}
+
+    .skillsRounds {
+	  list-style: none;
+	  text-align: center;
+	  -webkit-padding-start: 0px;
+	}
+
+	.skillsRounds li {
+	  position: relative;
+	  display: inline-block;
+	  /*margin-right: -4px;*/
+	}
+
+	.skillsRounds a {
+	  display: block;
+	  background-color: #424242;
+	  background-image: -webkit-gradient(linear, left top, left bottom, from(#424242), to( #767676));
+	  background-image: -webkit-linear-gradient(top, #424242, #767676); 
+	  background-image: -moz-linear-gradient(top, #424242, #767676); 
+	  background-image: -ms-linear-gradient(top, #424242, #767676); 
+	  background-image: -o-linear-gradient(top, #424242, #767676); 
+	  color: #fff;
+	  margin: 36px;
+	  width: 144px;
+	  height: 144px;
+	  position: relative;
+	  text-align: center;
+	  line-height: 144px;
+	  border-radius: 50%;
+	  box-shadow: 0px 3px 8px #aaa, inset 0px 2px 3px #fff;
+	}
+
+	.skillsRounds a:hover{
+	  text-decoration: none;
+	  color: #555;
+	  background: #f5f5f5;
+	}
+
+	.skillInput {
+		margin:auto;
+	}
+
+	
+
+    
