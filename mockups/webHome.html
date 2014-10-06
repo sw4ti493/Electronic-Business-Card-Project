@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Business Card</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <style>
+    .body {
+    	background-color: black;
+    }
+
+    .card {
+    	max-width:50%;
+    	text-align:center;
+    	background-color:white;
+    }
+
+    .name{
+    	text-align:left;
+    }
+
+    .headshot {
+		max-height:150px;
+		max-width:150px;
+    }
+
+    .headline{
+    	text-align: left;
+    }
+
+    .contactButtons {
+    		dislpay:inline;
+    		height:40px;
+    		border:1px solid black;
+    	}
+
+
+
+    </style>
+</head>
+<body class="body">
+	<section class="card container"><!-- add infinite scroll -->
+		<span class="name"><h1>Swati Kumar | Web Developer</h1></span><br><br><br><br>
+		<div class="description">
+		    <img src="images/swatiHeadshot.jpg" class="col-md-4 headshot">
+		    <h3 class="col-md-8 headline">This is a headline about me, my goals, and my accomplishments along with any specific directions to contact me.</h3>
+	  	</div>
+	  	<section class="skillsList container">
+	  		<div class="container">
+			  	<div class="skillOne">
+				  	<div class="panel panel-default col-md-6">
+					  <div class="panel-heading container" style="max-width: 100%">
+					    <h4 class="panel-title">Skill 1</h4>
+					  </div>
+					  <div class="panel-body ">
+					  	<p>Skill Description</p>
+					  </div>
+					</div>
+				</div>
+				<div class="skillTwo">
+				  	<div class="panel panel-default col-md-6">
+					  <div class="panel-heading container" style="max-width: 100%">
+					    <h4 class="panel-title">Skill 2</h4>
+					  </div>
+					  <div class="panel-body">
+					  	<p>Skill Description</p>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</section>
+	  	<div class="col-md-12 footer" style="text-align:center;">
+	    	<img src="images/mail.png" class="contactButtons">
+	    	<img src="images/phone.png" class="contactButtons">
+	    	<img src="images/linkedin-wrap.png" class="contactButtons">
+	    	<img src="images/twitter.png" class="contactButtons">
+	    </div>
+	</section> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>
