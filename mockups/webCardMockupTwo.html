@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html ng-app="busCard">
+<head>
+    <title>Business Card</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="webCardMockupTwoStyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+</head>
+
+<body class="body">
+  <div class="card container" ng-controller="MainCtrl">
+    <div class="col-md-6 col-sm-6 " id="inputData">
+      <h3>Enter your details below to generate your business card.</h3>
+      <form class="form-horizontal wrapper" role="form" ng-submit="addUser()">
+        <div>
+         <div class="col-md-6">
+           <input type="text" placeholder="Enter Github Username" class="form-control" name="username" ng-model="username" ><br>
+           <input type="text" placeholder="Enter Linkedin Public URL" class="form-control" name="linkedin" ng-model="linkedin" /><br>
+           <input type="text" placeholder="Enter Twitter Username" class="form-control" name="twitter" ng-model="twitter" /><br>
+         </div>
+         <div class="col-md-6">
+           <input type="text" placeholder="Enter Phone Number (12345678900)" class="form-control" name="phone" ng-model="phone" /><br>
+           <input type="text" placeholder="Enter Email Address" class="form-control" name="email" ng-model="email"/><br>
+           <input type="text" placeholder="Job Title/Position at Company" class="form-control" name="position" ng-model="position" /><br>
+         </div>
+         <div class="col-md-12"><textarea rows="4" placeholder="Headline" class="form-control" name="headline" ng-model="headline"></textarea><br></div>
+        </div>
+        <div>
+          <div class="col-md-4"><!-- Skill 1 -->
+        <input class="form-control skillInput" type="text" placeholder="Skill 1 Name" name="skillOneName" ng-model="skillOneName"/><br>
+        <input class="form-control skillInput" type="text" placeholder="Skill 1 Link" name="skillOneLink" ng-model="skillOneLink"/><br>
+                </div>
+
+        <div class="col-md-4"><!-- Skill 2 -->
+        <input class="form-control skillInput" type="text" placeholder="Skill 2 Name" name="skillTwoName" ng-model="skillTwoName"/><br>
+        <input class="form-control skillInput" type="text" placeholder="Skill 2 Link" name="skillTwoLink" ng-model="skillTwoLink"/><br>
+                </div>
+
+        <div class="col-md-4"><!--  Skill 3 -->
+        <input class="form-control skillInput" type="text" placeholder="Skill 3 Name" name="skillThreeName" ng-model="skillThreeName"/><br>
+        <input class="form-control skillInput" type="text" placeholder="Skill 3 Link" name="skillThreeLink" ng-model="skillThreeLink"/><br>
+                </div>
+
+        <div class="col-md-4"><!-- Skill 4 -->
+        <input class="form-control skillInput" type="text" placeholder="Skill 4 Name" name="skillFourName" ng-model="skillFourName"><br>
+        <input class="form-control skillInput" type="text" placeholder="Skill 4 Link" name="skillFourLink" ng-model="skillFourLink"/><br>
+                </div>
+
+        <div class="col-md-4"><!--  Skill 5 -->
+        <input class="form-control skillInput" type="text" placeholder="Skill 5 Name" name="skillFiveName" ng-model="skillFiveName" /><br>
+        <input class="form-control skillInput" type="text" placeholder="Skill 5 Link" name="skillFiveLink" ng-model="skillFiveLink"/><br>
+                </div>
+
+                <div class="col-md-4"><!--   Skill 6 -->
+        <input class="form-control skillInput" type="text" placeholder="Skill 6 Name" name="skillSixName" ng-model="skillSixName"/><br>
+        <input class="form-control skillInput" type="text" placeholder="Skill 6 Link" name="skillSixLink" ng-model="skillSixLink"/><br>
+        </div>
+             </div>
+
+      <input type="submit" value="Submit" class="btn btn-primary"/>
+      </form>
+    </div>
+    <div class="wrapper col-md-6 col-sm-6" ng-repeat="username in userdata" id="outputData">
+      <div >
+        <!-- Social Media Icons at the Top of the Business Card -->
+        <table class="col-md-12 col-sm-12 table table-bordered social-media-icons">
+          <tr>
+            <td><a href="mailto:{{email}}"><i class="fa fa-envelope-square fa-4x contactButtons"></i></a></td>
+            <td><a href="tel:{{phone}}"><i class="fa fa-phone-square fa-4x contactButtons"></i></a></td>
+            <td><a href="http://{{linkedin}}"><i class="fa fa-linkedin-square fa-4x contactButtons"></i></a></td>
+            <td><a href="http://twitter.com/+{{twitter}}"><i class="fa fa-twitter-square fa-4x contactButtons"></i></a></td>
+            <td><a href="http://github.com/+{{username.login}}"><i class="fa fa-git-square fa-4x contactButtons"></i></a></td>
+          </tr>
+        </table>
+        <!-- Headshot from LinkedIn/Github along with Name+Position+Location+Headline -->
+        <div class="">
+          <!-- Headshot from LinkedIn/GitHub -->
+          <div class="col-md-4 col-sm-4">
+            <img src="{{username.avatar_url}}" class="headshot">
+          </div>
+          <!-- Personal Information -->
+          <div class="col-md-8 col-sm-8">
+            <span class="name"><h1>{{username.name}}</h1></span>
+            <span class="name"><h4>{{position}}</h4></span>
+            <span class="name"><h5>Location: {{username.location}}</h5></span>
+          </div>
+          <div class="col-md-12">
+            <div class="name"><textarea class="col-md-12 headline-text">{{headline}}</textarea></div>
+          <div>
+        </div>
+        <div class="col-md-12 skills">
+          <a href="http://{{skillOneLink}}"><button type="button" class="btn btn-primary col-sm-6 col-md-6 col-lg-6 skillButtons">{{skillOneName}}</button></a>
+          <a href="http://{{skillTwoLink}}"><button type="button" class="btn btn-primary col-sm-6 col-md-6 col-lg-6 skillButtons">{{skillTwoName}}</button></a>
+          <a href="http://{{skillThreeLink}}"><button type="button" class="btn btn-primary col-sm-6 col-md-6 col-lg-6 skillButtons">{{skillThreeName}}</button></a>
+          <a href="http://{{skillFourLink}}"><button type="button" class="btn btn-primary col-sm-6 col-md-6 col-lg-6 skillButtons">{{skillFourName}}</button></a>
+          <a href="http://{{skillFiveLink}}"><button type="button" class="btn btn-primary col-sm-6 col-md-6 col-lg-6 skillButtons">{{skillFiveName}}</button></a>
+          <a href="http://{{skillSixLink}}"><button type="button" class="btn btn-primary col-sm-6 col-md-6 col-lg-6 skillButtons">{{skillSixName}}</button></a>
+        </div>
+        <div>
+          <span class="col-md-3"><i class="fa fa-pencil-square-o fa-4x notesIcon"><h4>Notes to Self</h4></i></span>
+          <span class="col-md-9"><textarea rows="4" class="col-md-12 notesText" ng-model="notes">{{notes}}</textarea></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  var myApp = angular.module('busCard', []);
+    myApp.controller('MainCtrl', function ($scope, $http) {
+        $scope.userdata = [];
+        $scope.addUser = function() {
+            var theUrl = "https://api.github.com/users/"+$scope.username;
+            console.log(theUrl);
+
+            var promise = $http.get(theUrl);
+            promise.then(function(response){
+                $scope.userdata.push(response.data);
+                console.log($scope.userdata);
+            })
+        };
+//        $scope.submit = false;
+//        $scope.edit = true;
+    });
+
+  </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+
+    textarea {
+      border:none;
+    }
+
+    .body {
+      background-color: black;
+    }
+
+    .card {
+      max-width:95%;
+      text-align:center;
+      background-color:white;
+      margin-top:50px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    .name{
+      text-align:left;
+    }
+
+    .headshot {
+    max-height:150px;
+    max-width:150px;
+    float:left;
+    border-radius:50%;
+    }
+
+    .headline{
+      text-align: left;
+      float:right;
+    }
+
+    .headline-text {
+
+    }
+
+    .social-media-icons {
+
+    }
+
+    .contactButtons {
+        height:60px;
+        color:black;
+      }
+
+    .skills {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .skillButtons {
+      margin: 20px;
+      max-width: 200px;
+    }
+
+    .btn-primary, .btn-primary:hover, .btn-primary:focus {
+      background-color:#458B00;
+      border-color:#458B00;
+      background-image: linear-gradient(to bottom,#458B00 0,#458B00 100%);;
+    }
+
+    .notesIcon {
+      color: black;
+    }
+
+    .skillInput {
+      margin:auto;
+    }
+
+    #inputData {
+      float:left;
+      border: 1px black;
+      border-right: thin solid black;
+    }
+
+    #outputData {
+      float:right;
+    }
+
+    .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+      border-color:black;
+    }
+
+
+
