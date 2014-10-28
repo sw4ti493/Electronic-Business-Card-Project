@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="webCardMockupTwoStyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.1.2/firebase.js"></script>
+
 </head>
 
 <body class="body">
@@ -125,6 +127,30 @@
 //        $scope.submit = false;
 //        $scope.edit = true;
     });
+
+  var myBuildProfileRef = new Firebase("https://mycard.firebaseio.com/");
+  myFirebaseRef.set({
+  username: "$scope.username",
+  linkedin: "$scope.linkedin",
+  twitter: "$scope.twitter",
+  phone: "$scope.phone",
+  email: "$scope.email",
+  position: "$scope.position",
+  headline: "$scope.headline",
+  skillOneName: "$scope.skillOneName",
+  skillOneLink: "$scope.skillOneLink",
+  skillTwoName: "$scope.skillTwoName",
+  skillTwoLink: "$scope.skillTwoLink",
+  skillThreeName: "$scope.skillThreeName",
+  skillThreeLink: "$scope.skillThreeLink",
+  skillFourName: "$scope.skillFourName",
+  skillFourLink: "$scope.skillFourLink",
+  skillFiveName: "$scope.skillFiveName",
+  skillFiveLink: "$scope.skillFiveLink",
+  skillSixName: "$scope.skillSixName",
+  skillSixLink: "$scope.skillSixLink"
+
+});
 
   </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
